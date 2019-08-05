@@ -2,7 +2,6 @@
 #
 # Класс WordReader, отвечающий за чтение слова для игры.
 class WordReader
-
   def read_from_args
     return ARGV[0].downcase
   end

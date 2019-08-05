@@ -1,5 +1,4 @@
 class Game
-
   def initialize(slovo)
     @letters = get_letters(slovo)
     @errors = 0
