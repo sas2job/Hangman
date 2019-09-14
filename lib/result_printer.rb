@@ -55,8 +55,8 @@ class ResultPrinter
     cls
 
     puts
-    puts "Слово: #{get_word_for_print(game.letters, game.good_letters)}"
-    puts "Ошибки: #{game.bad_letters.join(", ")}"
+    puts "Слово: #{get_word_for_print(game.letters, game.good_letters)}".colorize(:light_green)
+    puts "Ошибки: #{game.bad_letters.join(", ")}".colorize(:light_red)
 
     # Обратите внимание, что вызов метода print_viselitsa никак не поменялся,
     # поменялась только его реализация.
@@ -64,15 +64,15 @@ class ResultPrinter
 
     if game.status == -1
       puts
-      puts "Вы проиграли :("
-      puts "Загаданное слово было: " + game.letters.join("")
+      puts "Вы проиграли :(".blue.on_red.blink
+      puts "Загаданное слово было: " + game.letters.join("").colorize(:light_yellow)
       puts
     elsif game.status == 1
       puts
-      puts "Поздравляем, вы выиграли!"
+      puts "Поздравляем, вы выиграли!".colorize(red)
       puts
     else
-      puts "У вас осталось ошибок: " + (7 - game.errors).to_s
+      puts "У вас осталось ошибок: ".colorize(:light_cyan) + (7 - game.errors).to_s.colorize(:light_blue)
     end
   end
 

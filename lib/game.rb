@@ -36,15 +36,15 @@ class Game
      if bukva == "е"
        @good_letters << "ё"
      end
- 
+
      if bukva == "ё"
        @good_letters << "е"
      end
- 
+
      if bukva == "и"
        @good_letters << "й"
      end
- 
+
      if bukva == "й"
        @good_letters << "и"
      end
@@ -65,7 +65,7 @@ class Game
   end
 
   def ask_next_letter
-    puts "\nВведите следующую букву"
+    puts "\nВведите следующую букву".colorize(:light_white)
 
     letter = ""
     while letter == ""

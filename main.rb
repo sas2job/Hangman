@@ -22,7 +22,11 @@ require_relative "lib/game"
 require_relative "lib/result_printer"
 require_relative "lib/word_reader"
 
-puts "Игра виселица. Homework 15-4\n\n"
+# Подключаем классы гема "colorize"
+require 'colorize'
+require 'colorized_string'
+
+puts "\nИгра виселица. Homework 15-4\n\n".colorize(:light_blue)
 sleep 1
 
 printer = ResultPrinter.new
